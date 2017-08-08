@@ -9,7 +9,7 @@ Then:
 export BASE=s3://testdata
 
 # For trying out with local HDFS
-#export BASE=/user/ec2-user
+#export BASE=hdfs://$(hostname)/
 
 
 hdfs dfs -mkdir ${BASE}/t1/foo
