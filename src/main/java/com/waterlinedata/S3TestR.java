@@ -33,10 +33,10 @@ public class S3TestR {
         Path absPath = mainFileStatus.getPath();
         FileStatus[] fileStatuses = fileSystem.listStatus(absPath);
         for (FileStatus fileStatus : fileStatuses) {
-            if (fileStatus.getPath().equals(path)) {
+            /*if (fileStatus.getPath().equals(path)) {
                 System.out.println("\tSkipping path : " + fileStatus.getPath().toString());
                 continue;
-            }
+            }*/
             PrintUtil.printHadoopStyle(fileStatus);
             if (fileStatus.isDirectory()) {
                 listDirsRecursively(fileStatus.getPath(), fileSystem);
